@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budget Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -12,69 +12,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="sub-container">
-          <!-- Budget -->
-          <div class="total-amount-container">
-            <h3>Budget</h3>
-            <p class="hide error" id="budget-error">
-              Value Cannot be empty or negative
-            </p>
-            <input
-              type="number"
-              id="total-amount"
-              placeholder="Enter total amount"
-              <
-            />
-            <button class="submit" id="total-amount-button">Set Budget</button>
-          </div>
+  <body class="bg-black">
+    <div class="main bg-black h-[100vh] w-[100vw] relative" id="main">
+     <div class="container1 bg-violet-500 w-75 h-40 pl-2 pr-2 absolute left-10 top-10 flex flex-col rounded">
+      <h2 class="text-2xl font-bold">Budget</h2>
+      <p class="error-msg text-red-500 font-semibold hidden">Please Enter The Amount </p>
+      <input type="" placeholder="Total Budget" class="bg-white rounded py-1 my-2">
+      <button class="submit my-2 bg-emerald-500 rounded px-2 py-2 font-semibold">Add Budget</button>
 
-          <!-- Expenditure -->
-          <div class="user-amount-container">
-            <h3>Expenses</h3>
-            <p class="hide error" id="product-title-error">
-              Values cannot be empty
-            </p>
-            <input
-              type="text"
-              class="product-tile"
-              id="product-title"
-              placeholder="Enter Product Title"
-            />
-            <input
-              type="number"
-              id="user-amount"
-              placeholder="Enter Cost of the product"
-            />
-            <button class="submit" id="check-amount">Check Amount</button>
-          </div>
-        </div>
-        <!-- Output -->
-        <div class="output-container flex-space">
-          <div>
-            <p>Total Budget</p>
-            <span id="amount">0</span>
-          </div>
-          <div>
-            <p>Expenses</p>
-            <span id="expenditure-value">0</span>
-          </div>
-          <div>
-            <p>Balance</p>
-            <span id="balance-amount">0</span>
-          </div>
-        </div>
-      </div>
-      <!-- List -->
-       <div class="list">
-        <h3>Expense List</h3>
-        <div class="list-container" id="list">
-
-        </div>
-       </div>
+     </div>
     </div>
 
     <!-- Script -->
